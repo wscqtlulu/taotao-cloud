@@ -1,0 +1,41 @@
+server:
+  port: 3010
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wscqtlulu/taotao-cloud-config
+          #请输入配置文件所在git账号
+          username:
+          #请输入配置文件所在git密码
+          password:
+          #访问http://localhost:3010/consumer1-config-dev.yml获取consumer1-config-dev.yml文件信息
+  security:
+    user:
+      name: admin
+      password: 123456
+
+# 配置集群eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:3001/eureka/,http://peer2:3002/eureka/
+  instance:
+    hostname: config-server
+    prefer-ip-address: true
+
+
+logging:
+  level:
+    org.springframework.cloud: debug
+    org.springframework.boot: debug
+# 配置集群eureka注册中心
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://peer1:3001/eureka/,http://peer2:3002/eureka/
+
+

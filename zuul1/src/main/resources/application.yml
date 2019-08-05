@@ -1,0 +1,24 @@
+server:
+  port: 4010
+spring:
+  application:
+    name: zuul1
+# 配置集群eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:3001/eureka/,http://peer2:3002/eureka/
+
+#路由规则
+zuul:
+  routes:
+    consumers:
+      path: /consumer1/**
+      serviceId: consumer1
+    providers:
+      path: /provider1/**
+      serviceId: provider1
+
+logging:
+  level:
+    com.netflix: debug

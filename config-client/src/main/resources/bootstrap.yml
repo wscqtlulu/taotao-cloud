@@ -1,0 +1,26 @@
+spring:
+  application:
+    #name对应config server中的{application}
+    name: consumer1-config
+  cloud:
+    config:
+      #profile对应config server中的{profile}
+      profile: dev
+      #label对应config server中的分支
+      label: master
+      #uri config server中的地址，默认是http://localhost:8888/，如果这个配置不在bootstrap里面而在application的配置文件里面则会直接访问默认地址而报错
+#      uri: http://localhost:3010/
+      discovery:
+        enabled: true
+        service-id: config-server
+      username: admin
+      password: 123456
+
+# 配置集群eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:3001/eureka/,http://peer2:3002/eureka/
+  instance:
+    hostname: config-client
+    prefer-ip-address: true

@@ -1,0 +1,23 @@
+server:
+  port: 6012
+spring:
+  application:
+    name: provider1
+  datasource:
+    url: jdbc:mysql://localhost:3306/HeartMirror_201904271407?useSSL=true&verifyServerCertificate=false&characterEncoding=UTF-8
+    username: root
+    password: wscqtlulu
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  typeAliasesPackage: com.springcloud.provider1.pojo
+  mapperLocations: classpath:mapper/*.xml
+# 配置集群eureka注册中心
+eureka:
+  client:
+    #仅提供服务，不需要访问其他服务，所以不需要从注册中心获取服务清单
+    fetch-registry: false
+    service-url:
+      defaultZone: http://peer1:3001/eureka/,http://peer2:3002/eureka/
+  instance:
+    hostname: provider1

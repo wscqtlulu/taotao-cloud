@@ -1,0 +1,19 @@
+${AnsiColor.BLUE}
+                   ___====-_  _-====___                     ${AnsiColor.BRIGHT_MAGENTA}
+             _--^^^#####//      \\#####^^^--_               ${AnsiColor.BRIGHT_GREEN}
+          _-^##########// (    ) \\##########^-_            ${AnsiColor.BRIGHT_YELLOW}
+         -############//  |\^^/|  \\############-           ${AnsiColor.BRIGHT_CYAN}
+       _/############//   (@::@)   \\############\_         ${AnsiColor.BRIGHT_RED}
+      /#############((     \\//     ))#############\        ${AnsiColor.BLACK}
+     -###############\\    (oo)    //###############-       ${AnsiColor.BLUE}
+    -#################\\  / VV \  //#################-      ${AnsiColor.RED}
+   -###################\\/      \//###################-     ${AnsiColor.BRIGHT_MAGENTA}
+  _#/|##########/\######(   /\   )######/\##########|\#_    ${AnsiColor.BRIGHT_GREEN}
+  |/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|    ${AnsiColor.BRIGHT_YELLOW}
+  `  |/  V  V  `   V  \#\| |  | |/#/  V   '  V  V  \|  '    ${AnsiColor.BRIGHT_CYAN}
+     `   `  `      `   / | |  | | \   '      '  '   '       ${AnsiColor.BRIGHT_RED}
+                      (  | |  | |  )                        ${AnsiColor.BLACK}
+                     __\ | |  | | /__                       ${AnsiColor.BLUE}
+                    (vvv(VVV)(VVV)vvv)                      ${AnsiColor.RED}
+                         神兽保佑                             ${AnsiColor.BRIGHT_MAGENTA}
+                        代码无BUG!                           ${AnsiColor.BRIGHT_GREEN}

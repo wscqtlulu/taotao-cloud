@@ -1,0 +1,21 @@
+server:
+  port: 6020
+spring:
+  application:
+    name: provider2
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useSSL=true&verifyServerCertificate=false&characterEncoding=UTF-8
+    username: root
+    password: wscqtlulu
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  typeAliasesPackage: com.springcloud.provider2.pojo
+  mapperLocations: classpath:mapper/*.xml
+
+# 配置集群eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:3001/eureka/,http://peer2:3002/eureka/

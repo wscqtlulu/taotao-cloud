@@ -1,0 +1,14 @@
+server:
+  port: 3002
+spring:
+  application:
+    name: eureka
+eureka:
+  instance:
+    hostname: peer2
+    #prefer-ip-address: true
+  client:
+    service-url:
+      #defaultZone: http://192.168.2.176:3001/eureka/,http://192.168.2.176:3002/eureka/
+      defaultZone: http://peer1:3001/eureka/,http://peer2:3002/eureka/
+
