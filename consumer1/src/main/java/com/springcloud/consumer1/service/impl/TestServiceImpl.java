@@ -19,4 +19,9 @@ public class TestServiceImpl implements ITestService {
         return testFeign.getTestInfo(name);
     }
 
+    @Override
+    public String getTestName(String name){
+        return testFeign.getTestName(name);
+    }
+
 }

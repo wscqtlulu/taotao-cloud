@@ -5,4 +5,6 @@ package com.springcloud.consumer1.service;
  */
 public interface ITestService {
     String getTestInfo(String name);
+
+    String getTestName(String name);
 }

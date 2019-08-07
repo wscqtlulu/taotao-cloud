@@ -15,7 +15,7 @@ public class TestController {
     @GetMapping("/test/info")
     public String getTestInfo(String name){
         System.out.println("getTestInfo api " + System.currentTimeMillis());
-        return name + " account info";
+        return name + " test info";
     }
 
     @GetMapping("/test/person")

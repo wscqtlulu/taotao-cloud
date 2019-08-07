@@ -19,4 +19,7 @@ public interface TestFeign {
     @GetMapping("/test/info")
     String getTestInfo(@RequestParam("name") String name);
 
+    @GetMapping("/test/name")
+    String getTestName(@RequestParam("name") String name);
+
 }

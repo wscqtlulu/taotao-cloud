@@ -51,10 +51,13 @@
 
     <modules>
         <module>consumer1</module>
+        <module>consumer2</module>
         <module>eureka1</module>
         <module>eureka2</module>
         <module>provider1</module>
         <module>provider2</module>
+        <module>hystrix-turbine</module>
+        <module>hystrix-dashboard</module>
     </modules>
 
 </project>

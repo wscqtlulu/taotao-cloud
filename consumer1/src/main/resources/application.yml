@@ -49,7 +49,7 @@ management:
         #此处控制的是不开放哪些端点
         #exclude: shutdown,threaddump
         #此处控制的是开放哪些端点，如果需要开启少数端点可以这样配置：health,info。如果开启多个则使用*号开启除了exclude的端点
-        include: "health,info,metrics,beans"
+        include: "health,info,metrics,beans,hystrix.stream"
   endpoint:
     health:
       #开放显示health端点详情

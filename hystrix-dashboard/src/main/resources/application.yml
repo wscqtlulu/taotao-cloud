@@ -1,0 +1,17 @@
+server:
+  port: 3050
+spring:
+  application:
+    name: hystrix-dashboard
+
+#配置集群eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:3001/eureka/,http://peer2:3002/eureka/
+
+
+#首页http://localhost:3050/hystrix
+#turbine地址：http://localhost:3070/turbine.stream
+#consumer地址：http://localhost:5010/actuator/hystrix.stream
+#consumer2地址：http://localhost:5015/actuator/hystrix.stream

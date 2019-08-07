@@ -1,0 +1,45 @@
+server:
+  port: 5015
+#  servlet:
+#    context-path: /consumer5
+
+# 在feign中开启熔断器
+feign:
+  hystrix:
+    enabled: true
+
+spring:
+  application:
+    name: consumer5
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useSSL=true&verifyServerCertificate=false&characterEncoding=UTF-8
+    username: root
+    password: wscqtlulu
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# 配置集群eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:3001/eureka/,http://peer2:3002/eureka/
+  instance:
+    hostname: consumer5
+    prefer-ip-address: true
+
+mybatis:
+  typeAliasesPackage: com.springcloud.consumer1.pojo
+  mapperLocations: classpath:mapper/*.xml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        #此处控制的是不开放哪些端点
+        #exclude: shutdown,threaddump
+        #此处控制的是开放哪些端点，如果需要开启少数端点可以这样配置：health,info。如果开启多个则使用*号开启除了exclude的端点
+        include: "health,info,metrics,beans,hystrix.stream"
+  endpoint:
+    health:
+      #开放显示health端点详情
+      show-details: always

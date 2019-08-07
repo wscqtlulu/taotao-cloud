@@ -17,8 +17,8 @@ public class InfoController {
     private TestFeign testFeign;
 
     @GetMapping("/test/name")
-    public String getTestInfo(String name){
-        return testService.getTestInfo(name);
+    public String getTestName(String name){
+        return testService.getTestName(name);
     }
 
     @GetMapping("/test/info")

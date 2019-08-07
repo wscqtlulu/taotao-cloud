@@ -1,0 +1,28 @@
+server:
+  port: 3070
+spring:
+  application:
+    name: hystrix-turbine
+
+# 配置集群eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:3001/eureka/,http://peer2:3002/eureka/
+
+turbine:
+  app-config: consumer1,consumer5
+  cluster-name-expression: "'default'"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        #此处控制的是不开放哪些端点
+        #exclude: shutdown,threaddump
+        #此处控制的是开放哪些端点，如果需要开启少数端点可以这样配置：health,info。如果开启多个则使用*号开启除了exclude的端点
+        include: "health,info,metrics,beans,hystrix.stream"
+  endpoint:
+    health:
+      #开放显示health端点详情
+      show-details: always

@@ -10,6 +10,11 @@ import org.springframework.stereotype.Component;
 public class TestFeignFallback implements TestFeign {
     @Override
     public String getTestInfo(String name) {
-        return "get account info error!!!";
+        return "get test info error!!!";
+    }
+
+    @Override
+    public String getTestName(String name) {
+        return "get test name error!!!";
     }
 }
