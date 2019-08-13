@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
@@ -29,8 +30,7 @@ import org.springframework.web.client.RestTemplate;
  *                                 _-~-__   ~)  \--______________--~~
  *                               //.-~~~-~_--~- |-------~~~~~~~~
  *                                      //.-~~~--\
- *                               神兽保佑
- *                              代码无BUG!
+ *
  */
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -38,7 +38,11 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 public class Consumer1Application {
 
+    /**
+     * 如果restTemplate远程调用的时候使用服务名，则需要在RestTemplate加上@LoadBalanced注解开启负载均衡，如果使用域名：端口号则需要去掉@LoadBalanced
+     */
     @Bean
+    @LoadBalanced
     RestTemplate restTemplate(){
         return new RestTemplate();
     }

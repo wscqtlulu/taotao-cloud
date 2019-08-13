@@ -15,5 +15,4 @@ ${AnsiColor.BLUE}
                       (  | |  | |  )                        ${AnsiColor.BLACK}
                      __\ | |  | | /__                       ${AnsiColor.BLUE}
                     (vvv(VVV)(VVV)vvv)                      ${AnsiColor.RED}
-                         神兽保佑                             ${AnsiColor.BRIGHT_MAGENTA}
-                        代码无BUG!                           ${AnsiColor.BRIGHT_GREEN}
+

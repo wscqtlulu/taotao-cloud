@@ -1,5 +1,5 @@
 server:
-  port: 6020
+  port: 6021
 spring:
   application:
     name: provider2

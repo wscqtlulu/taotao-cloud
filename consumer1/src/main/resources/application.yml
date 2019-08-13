@@ -27,6 +27,11 @@ eureka:
     hostname: consumer1
     prefer-ip-address: true
 
+#属性配置某个ribbon客户端的负载均衡策略
+#provider2:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
 mybatis:
   typeAliasesPackage: com.springcloud.consumer1.pojo
   mapperLocations: classpath:mapper/*.xml

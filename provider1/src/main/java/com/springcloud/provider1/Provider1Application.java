@@ -20,8 +20,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *                     (  | |  | |  )
  *                    __\ | |  | | /__
  *                   (vvv(VVV)(VVV)vvv)
- *                        神兽保佑
- *                       代码无BUG!
+ *
  * @author taotao
  */
 @SpringBootApplication

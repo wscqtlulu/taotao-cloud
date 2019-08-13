@@ -17,5 +17,4 @@ ${AnsiColor.MAGENTA}
                                   _-~-__   ~)  \--______________--~~                ${AnsiColor.BLUE}
                                 //.-~~~-~_--~- |-------~~~~~~~~                     ${AnsiColor.BRIGHT_CYAN}
                                        //.-~~~--\                                   ${AnsiColor.RED}
-                                神兽保佑                                             ${AnsiColor.BRIGHT_YELLOW}
-                               代码无BUG!                                            ${AnsiColor.BRIGHT_GREEN}
+
